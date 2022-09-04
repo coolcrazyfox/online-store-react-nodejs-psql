@@ -18,21 +18,21 @@ const BasketDevice = sequelize.define('basket_device', {
 
 const Device = sequelize.define('device', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
-    title: {type: DataTypes.STRING, allowNull: false},
+    title: {type: DataTypes.STRING, allowNull: true},
     name: {type: DataTypes.STRING, unique: true, allowNull: false},
     price: {type: DataTypes.INTEGER, allowNull: false},
     country: {type: DataTypes.STRING, allowNull: false},
-    link: {type: DataTypes.STRING, allowNull: false},
-    // rating: {type: DataTypes.INTEGER, defaultValue: 0},
-    img: {type: DataTypes.STRING, allowNull: false},
+    linkImg: {type: DataTypes.STRING, allowNull: true},
+    rating: {type: DataTypes.INTEGER, defaultValue: 0},
+    img: {type: DataTypes.STRING, allowNull: true},
 })
 
-const Type = sequelize.define('type', {
+const Type = sequelize.define('type', {//ebay
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
     name: {type: DataTypes.STRING, unique: true, allowNull: false},
 })
 
-const Brand = sequelize.define('brand', {
+const Brand = sequelize.define('brand', {//bamper
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
     name: {type: DataTypes.STRING, unique: true, allowNull: false},
 })
@@ -44,7 +44,8 @@ const Rating = sequelize.define('rating', {
 
 const DeviceInfo = sequelize.define('device_info', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
-    title: {type: DataTypes.STRING, allowNull: false},
+    title: {type: DataTypes.STRING, allowNull: true},
+    oem: {type: DataTypes.STRING, allowNull: false},
     description: {type: DataTypes.STRING, allowNull: false},
 })
 
