@@ -1,11 +1,12 @@
 import Admin from "./pages/Admin";
+import {ADMIN_ROUTE} from "./utils/consts";
 
 export const authRoutes = [
     {
-        path: './admin',
+        path: ADMIN_ROUTE,// path: './admin',
         Component: Admin
+    },
 
-    }
 ]
 export const publicRoutes = [
     {
