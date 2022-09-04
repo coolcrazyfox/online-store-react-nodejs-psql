@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import './App.css';
 import TabPage from "./pages/TabPage";
 import OEM_DATA from "./OEM_DATA.json";
+import {BrowserRouter} from "react-router-dom";
+import AppRouter from "./components/AppRouter";
 
 const data = OEM_DATA;
 
@@ -10,21 +12,20 @@ function App() {
     const [modalActive, setModalActive] = useState(false)
 
     return (
-        <>
-            <div className="main_container">
-                {/*<div className={'search_container'}>*/}
-
-                {/*    <button onClick={() => setModalActive(true)}>Open modal</button>*/}
-                {/*</div>*/}
-                <TabPage oemList={itemCarList}/>
-            </div>
-
-            {/*<Modal active={modalActive} setActive={setModalActive} oemList={itemCarList}>*/}
-            {/*    /!*{children}*!/*/}
-            {/*</Modal>*/}
-
-
-        </>
+        <BrowserRouter>
+            <AppRouter/>
+        </BrowserRouter>
+        // <>
+        //     {/*<div className="main_container">                */}
+        //     {/*    <TabPage oemList={itemCarList}/>*/}
+        //     {/*</div>*/}
+        //
+        //     {/*<Modal active={modalActive} setActive={setModalActive} oemList={itemCarList}>*/}
+        //     {/*    /!*{children}*!/*/}
+        //     {/*</Modal>*/}
+        //
+        //
+        // </>
 
 
     );
