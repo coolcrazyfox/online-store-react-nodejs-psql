@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Shop = () => {
+const DevicePage = () => {
     return (
         <div>
-            shop
+            device
         </div>
     );
 };
 
-export default Shop;
+export default DevicePage;

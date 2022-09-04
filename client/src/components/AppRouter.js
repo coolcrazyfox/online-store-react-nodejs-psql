@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Shop = () => {
+const AppRouter = () => {
     return (
         <div>
-            shop
+            AppRouter
         </div>
     );
 };
 
-export default Shop;
+export default AppRouter;
