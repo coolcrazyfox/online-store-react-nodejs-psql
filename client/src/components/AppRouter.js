@@ -22,7 +22,7 @@ const AppRouter = () => {
     return (
 
         <Routes>
-            <Routes>
+            {/*<Routes>*/}
                 <Route path={'/'} element={<Shop/>}/>
                 <Route path={PATH.ADMIN} element={<Admin/>}/>
                 <Route path={PATH.LOGIN} element={<Auth/>}/>
@@ -30,7 +30,7 @@ const AppRouter = () => {
                 <Route path={PATH.BASKET} element={<Basket/>}/>
                 <Route path={PATH.DEVICE + '/:id'} element={<DevicePage/>}/>
                 <Route path={'*'} element={<Error404/>}/>
-            </Routes>
+            {/*</Routes>*/}
             {/*{isAuth && authRoutes.map(({path, Component}) =>*/}
             {/*    <Route key={path} path={path} element={Component}/>*/}
             {/*)*/}
